@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Manan Bhavsar &mdash; Onepage Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../static/fonts/icomoon/style.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='../static/fonts/icomoon/style.css') }}">
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/jquery-ui.css">
-    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../static/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../static/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="../static/css/aos.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
-
-  <div class="site-wrap"  id="home-section">
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
+<head>
+  <title>Manan Bhavsar &mdash; Onepage Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png')}}" sizes="16x16" type="image/png">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p class="alert alert-success text-center">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
       </div>
-      <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center">
-
-          <div class="col-6 col-md-3 col-xl-4  d-block">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Manan Bhavsar<span class="text-primary">.</span> </a></h1>
+    <div class="site-wrap"  id="home-section">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
           </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-md-3 col-xl-4  d-block">
+              <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Manan Bhavsar<span class="text-primary">.</span> </a></h1>
+            </div>
+            <div class="col-12 col-md-9 col-xl-8 main-menu">
+              <nav class="site-navigation position-relative text-right" role="navigation">
 
-          <div class="col-12 col-md-9 col-xl-8 main-menu">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#features-section" class="nav-link">Skill Set</a></li>
-                <!-- <li class="has-children"> -->
-                  <!-- <li><a href="#about-section" class="nav-link">About Projects</a> -->
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
+                  <li><a href="#home-section" class="nav-link">Home</a></li>
+                  <li><a href="#features-section" class="nav-link">Skill Set</a></li>
+                  <!-- <li class="has-children"> -->
+                    <!-- <li><a href="#about-section" class="nav-link">About Projects</a> -->
                   <!-- <ul class="dropdown arrow-top">
                     <li><a href="#" target="_blank" class="nav-link"><span class="text-primary">More Free Templates</span></a></li>
                     <li><a href="#our-team-section" class="nav-link">Project Partners</a></li>
@@ -62,31 +64,25 @@
                         <li><a href="#">Menu Three</a></li>
                       </ul>
                     </li>
-                </ul> -->
-            </li>
-            <!-- <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> -->
-            <li><a href="#blog-section" class="nav-link">Project Highlights</a></li>
-            <li><a href="#contact-section" class="nav-link">Contact Me</a></li>
-        </ul>
-
-
-        <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0" ><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-    </div>
-</div>
-</header>
-<div class="site-blocks-cover" style="overflow: hidden;">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-
-          <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
-
-            <img src="../static/images/undraw_investing_7u74.svg" alt="Image" class="img-fluid img-absolute">
-
-
-            <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="col-lg-6 mr-auto">
-                <h1>Big Data Analyst Python Developer</h1>
-                <p class="mb-5">A passionate individual looking for challenging opportunity, where I can apply skillset learned from Technical Education and provide ample room for Career advancement.</p>
+                  </ul> -->
+                </li>
+                <!-- <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> -->
+                <li><a href="#blog-section" class="nav-link">Project Highlights</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact Me</a></li>
+              </ul>
+              <div class="col-6 col-md-9 d-inline-block d-lg-none ml-md-0" ><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+            </div>
+          </div>
+        </header>
+        <div class="site-blocks-cover" style="overflow: hidden;">
+          <div class="container">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-12" style="position: relative;" data-aos="fade-up" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/undraw_investing_7u74.svg')}}" alt="Image" class="img-fluid img-absolute">
+                <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="col-lg-6 mr-auto">
+                    <h1>Python Developer DevOps Engineer</h1>
+                    <p class="mb-5 font-weight-normal">I am passionate when it comes to technology and solving real-life problems with it. With my never-ending quest to learn and analytic thinking to solve problem effectively will be key asset in solving your tech related challenges.</p>
                 <!-- <div>
                   <a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a>
                 </div> -->
@@ -95,98 +91,106 @@
           </div>
         </div>
       </div>
-    </div>  
-
-
+    </div>
     <div class="site-section" id="features-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
           <div class="col-7 text-center  mb-5">
             <h2 class="section-title">Skill Sets</h2>
-            <p class="lead">Listed here is some key skills in the area of technicallity and analytics.</p>
+            <p class="lead">Listed here are some key skills in the area of technology and analytics.</p>
           </div>
         </div>
         <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="unit-4 d-block">
               <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/cloud.png')}}" width="32" height="32"/></span></span>
               </div>
               <div>
-                <h3>Big Data Tools</h3>
-                <p>Clear understanding of various Big Data Tools like HDFS, MapReduce, Pig, Hive, Spark. Efficient at running queries, aggregating data. Managing/configuring the system over cluster. </p>
-                <p><a href="https://drive.google.com/open?id=1T8M2Y_PJ8bksTl9PGKVZeioybdrd_q-P">Certificate</a></p>
+                <h3>Cloud Services</h3>
+                <p class="font-weight-normal">Hands on experience working with many cloud service vendors like AWS, GCP, MS Azure. Efficient at running Virtual Machines, defining and testing the Machine Learning models like image recognition and more.., storing/retrieving data over cloud to back Web application and more...</p>
+                <!-- <p><a href="#">Learn More</a></p> -->
               </div>
-            </div>
+            </div>           
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="unit-4 d-block">
               <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/python.webp')}}" width="32" height="32"/></span></span>
               </div>
               <div>
                 <h3>Python</h3>
-                <p>Excellent command over Python tested against projects with Web Development frameworks, Data Science problems, appying and testing Machine learning algorithms.  </p>
-                <p><a href="https://drive.google.com/open?id=1y-zq2hoeSRAfAZFenzTDgpNr7SDdnh-S">Certificate</a></p>
+                <p class="font-weight-normal">Strong conceptual understanding of the Python tested over projects with Web Development with Django/Flask frameworks. Also used same for Data Science, Machine learning algorithms to categorize the input value. </p>
+                <p><a target="_blank" href="https://drive.google.com/open?id=1y-zq2hoeSRAfAZFenzTDgpNr7SDdnh-S">Certificate</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up"  data-aos-delay="200">
             <div class="unit-4 d-block">
               <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/linux.svg')}}" width="32" height="32"/></span></span>
               </div>
               <div>
                 <h3>Linux OS</h3>
-                <p>8+ months of hands on experience working with Linux, with good command over command line interface. Sound understanding of system files distribution over OS and their role in OS. </p>             
-                <p><a href="https://drive.google.com/open?id=1T51l8fWWBIKB1ik08hY0V1g1GdrPpn7J">Certificate</a></p>
+                <p class="font-weight-normal">More than 1 year of hands on experience working with Linux, with good command over command line interface. Sound understanding of network, system, files distribution, processes, ssh and more... </p>             
+                <p><a target="_blank" href="https://drive.google.com/open?id=1T51l8fWWBIKB1ik08hY0V1g1GdrPpn7J">Certificate</a></p>
               </div>
             </div>
           </div>
-
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             <div class="unit-4 d-block">
               <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/analytics.png')}}" width="32" height="32"/></span></span>
               </div>
               <div>
                 <h3>Analytical Skill</h3>
-                <p>Excellent analytical skill proven over Major Research Project (MRP). Successfully lead the team and met all the timelines. Effectively liason with client and team members. For efforts got endorsement for Leadership and Customer Service & for more over Linkedin.</p>
+                <p class="font-weight-normal">Excellent analytical skill proven over Major Research Project (MRP). Successfully lead the team and met all the timelines. Effectively liason with client and team members. Got endorsement for Leadership, Customer Service & Data Analysis by client.</p>
                 <!-- <p><a href="#">Learn More</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary "><img src="{{ url_for('static', filename='images/devops.jpg')}}" width="32" height="32"/></span></span>
+              </div>
+              <div >
+                <h3>DevOps Tools</h3>
+                <div class="overflow-auto">
+                  <p class="font-weight-normal">Hands on working experiece working with Docker, Ansible and Jenkins. For my self-initialted project SocialApp, I created bash shell, yml, Dockerfile, Jenkinfile script to automate the process providing CI/CD feature to app. With my strong foundational understanding these tech stack you can expect consistent outcome, everytime!</p>
+                  <p><a target="_blank" href="https://drive.google.com/file/d/1orfBz6DXJz6yMlpPnSIqdJDhOrzhm5q3/view?usp=sharing">Certificate</a></p>
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/internet.png')}}" width="32" height="32"/></span></span>
+              </div>
+              <div>
+                <h3>Web Development</h3>
+                <p class="font-weight-normal">Gained Clear understanding of Web developement, JavaScript/ECMAScript in detail. Also gained hands on experience working with npm, react, redux, node.js like in trend framework/library. Also gained experience working with Bootstrap, HTML and CSS </p>
+                <p><a target="_blank" href="https://drive.google.com/file/d/1kln7cnvHpawxfqIFd6fvKJDtYMGCu4tl/view?usp=sharing">Certificate</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/bigdata.png')}}" width="32" height="32"/></span></span>
+              </div>
+              <div>
+                <h3>Big Data Tools</h3>
+                <p class="font-weight-normal">Clear understanding of various Big Data Tools like HDFS, MapReduce, Pig, Hive, Spark. Efficient at running queries, aggregating data. Managing/configuring the system over cluster. </p>
+                <p><a target="_blank" href="https://drive.google.com/open?id=1T8M2Y_PJ8bksTl9PGKVZeioybdrd_q-P">Certificate</a></p>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
-              </div>
-              <div>
-                <h3>Cloud Services</h3>
-                <p>Hands on experience working with many cloud service vendors like GCP, MS Azure, AWS. Efficient at running Virtual Machines, defining and testing the Machine Learning models like image recognition and more.., storing/retrieving data over cloud to back Web application and more...</p>
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>           
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
-              </div>
-              <div>
-                <h3>Data Analysis</h3>
-                <p>Learnt various Statistical concepts revelling the story of the context, with statistical tests to prove it's significance. Applied same with various tools like Tableau, Power BI, MS Excel. Effectively used infographics to tell the story of the data.</p>
-                <!-- <p><a href="#">Learn More</a></p> -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    
     <div class="feature-big">
       <div class="container">
         <div class="row mb-5 site-section">
@@ -195,7 +199,7 @@
           </div>
           <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
             <h2 class="text-black">Effective Communication and Team Player</h2>
-            <p class="mb-4">Throughout the time of the study at Georgian College worked on the various projects with multi-cultural environment and effectively accomplish the projects in timely manner. Throughout tenure maintained clear communication and resolve any backlogs.  </p>    
+            <p class="mb-4">Throughout the time of the study at Georgian College, I worked on the various projects with team of multi-cultural environment and effectively accomplish the projects in timely manner. Clear communication and effective contribution across the team was main indgridient leading to success of the project.</p>
 
 <!--              <div class="author-box" data-aos="fade-left">
               <div class="d-flex mb-4">
@@ -211,14 +215,13 @@
             </div>
           </div> -->
         </div>
-
         <div class="mt-5 row mb-5 site-section ">
           <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-left">
             <img src="../static/images/undraw_metrics_gtu7.svg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
             <h2 class="text-black">Motivated and Goal Oriented</h2>
-            <p class="mb-4">Technical and Analytical are field, I feel most passionate about. There were many hurdles on the way to accomplish the project, to which only right guidance of instructor and passion to learn has came to rescue. Moreover with attention to detail and quick learning ability I was able to accomplish the goals in timely manner.</p>
+            <p class="mb-4">Technical and Analytical are field, I feel most passionate about. There were many hurdles on the way to accomplish the project, to which only right guidance of instructor and passion to learn can rescue. Moreover with attention to detail and quick learning ability I was able to accomplish the goals in timely manner. Eventually it also made me capable to lead some projects and earn endorsement from client as well.</p>
 <!--              <div class="author-box" data-aos="fade-right">
               <div class="d-flex mb-4">
                 <div class="mr-3">
@@ -233,7 +236,6 @@
             </div>  -->
           </div>
         </div>
-
 <!--         <div class="row mb-5 site-section">
           <div class="col-lg-7" data-aos="fade-right">
             <img src="../static/images/undraw_gift_card_6ekc.svg" alt="Image" class="img-fluid">
@@ -280,7 +282,6 @@
 
       </div>
     </div>
-
 <!--     <div class="site-section bg-light" id="about-section">
       <div class="container">
         <div class="row mb-5">
@@ -491,7 +492,6 @@
         </div>
       </div>
     </div> -->
-
     <div class="site-section" id="blog-section">
       <div class="container">
         <div class="row mb-5">
@@ -499,30 +499,29 @@
             <h2 class="section-title mb-3">Project Highlights</h2>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <img src="../static/images/img_1.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">Stress and Coping Strategy among Students</a></h2>
+              <h2><a href="#">Stress and Coping Strategy</a></h2>
               <div class="meta mb-4">Team Leader <span class="mx-2">&bullet;</span> April 2020<span class="mx-2">&bullet;</span> <a>Data Analysis</a></div>
               <p>Leaded this project to conclude significance difference between Domestic and International students in terms of Stressors, Coping Strategy and Reactors. Studied and Followed 3 clinical models to make point. Concluded project right on time, earning Leadership, Customer Service, Data analytics and more by client on LinkedIn.</p>
-              <p><a href="https://drive.google.com/open?id=18dG1EDRn-ULNdAr6-wtbSCT5ey0D1Dhc">Final Report</a></p>
+              <p><a target="_blank" href="https://drive.google.com/open?id=18dG1EDRn-ULNdAr6-wtbSCT5ey0D1Dhc">Final Report</a></p>
             </div> 
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <img src="../static/images/img_2.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">User Interactive Tech-Blog Web Application</a></h2>
+              <h2><a href="#">Blog Post Web Application</a></h2>
               <div class="meta mb-4">Individual <span class="mx-2">&bullet;</span> May 2020<span class="mx-2">&bullet;</span> <a>Web Development</a></div>
               <p>Designed the Django Powered and Javascript prmopted Web Application demonstating to-dos of various IT technology in the Big Data. Provided User to leave comments on articles after sign up by User Login feature. Allowed the site admin to post more articles in Consice and Time-efficient manner.</p>
-              <p><a href="#">Code...</a></p>
+              <p><a href="https:/www.github.com/mananbh9/socialpost" target="_blank">Code...</a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="h-entry">
               <img src="../static/images/img_3.jpg" alt="Image" class="img-fluid">
-              <h2><a href="#">Image Classification into 5 Different Tags</a></h2>
+              <h2><a href="#">Image Classification into Different Tags</a></h2>
               <div class="meta mb-4">Individual <span class="mx-2">&bullet;</span> March 2020<span class="mx-2">&bullet;</span> <a>Machine Learning </a></div>
               <p>Modelled the Machine learning model which effectively classifies the image into 5 different race classification. Used the Azure Vision Services, also compared same against Google Cloud Console (GCP) and Amazon Web Service (AWS).</p>
               <!-- <p><a href="#">Continue Reading...</a></p> -->
@@ -532,88 +531,99 @@
         </div>
       </div>
     </div>
- 
-
-
-  <div class="site-section bg-image2 overlay" id="contact-section" style="background-image: url('../static/images/hero_1.jpg');">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-12 text-center">
-          <h2 class="section-title mb-3 text-white">Contact Me?</h2>
+    <div class="site-section bg-image2 overlay" id="contact-section" style="background-image: url('../static/images/hero_1.jpg');">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3 text-white">Contact Me?</h2>
+          </div>
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-7 mb-5">
 
+        <div class="row justify-content-center">
+          <div class="col-lg-7 mb-5">
 
-
-          <form action="/submit" method="POST" class="p-5 bg-white">
-            <h2 class="h4 text-black mb-5">Contact Form</h2> 
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="text-black" for="fname">First Name</label>
-                <input type="text" name="f_name" id="fname" class="form-control rounded-0">
+            <form action="" method="post" class="p-5 bg-white">
+              {{ form.hidden_tag() }}
+              <h2 class="h4 text-black mb-5">Contact Form</h2> 
+              <p class="text-secondary mb-5">Contact me regarding employmeny opportunity or technical question/challenge you are interested in.</p>
+              <div class="row form-group">
+                <div class="col-md-12 ">
+                  <!-- <label class="text-black" for="fname">First Name</label> -->
+                  <!-- <input type="text" name="f_name" id="fname" class="form-control rounded-0"> -->
+                  {{ form.f_name.label }}
+                  {{ form.f_name }}
+                </div>
               </div>
-              <div class="col-md-6">
-                <label class="text-black" for="lname">Last Name</label>
-                <input type="text" name="l_name" id="lname" class="form-control rounded-0">
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <!-- <label class="text-black" for="lname">Last Name</label> -->
+                  <!-- <input type="text" name="l_name" id="lname" class="form-control rounded-0"> -->
+                  {{ form.l_name.label }}
+                  {{ form.l_name }}
+                </div>
               </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="email">Email</label> 
-                <input type="email" name="email" id="email" class="form-control rounded-0">
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <!-- <label class="text-black" for="email">Email</label>  -->
+                  <!-- <input type="email" name="email" id="email" class="form-control rounded-0"> -->
+                  {{ form.email.label }}
+                  {{ form.email }}
+                </div>
               </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="subject">Subject</label> 
-                <input type="subject" name="subject" id="subject" class="form-control rounded-0">
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <!-- <label class="text-black" for="subject">Subject</label>  -->
+                <!-- <input type="subject" name="subject" id="subject" class="form-control 
+                  rounded-0"> -->
+                  {{ form.subject.label }}
+                  {{ form.subject }}
+                </div>
               </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="message">Message</label> 
-                <textarea name="message" name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Leave your message here..."></textarea>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <!-- <label class="text-black" for="message">Message</label>  -->
+                  <!-- <textarea name="message" name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Leave your message here..."></textarea> -->
+                  {{ form.message.label }}
+                  {{ form.message }}
+                </div>
               </div>
-            </div>
-            <div class="row form-group">
-              <div class="col-md-12">
-                <input type="submit" value="Send Message" class="btn btn-primary mr-2 mb-2">
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <!-- <input type="submit" value="Send Message" class="btn btn-primary mr-2 mb-2"> -->
+                  {{ form.submit }}
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer py-5 text-center">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-12">
-          <p class="mb-0">
-            <a href="https://www.facebook.com/bh1719" class="p-3"><span class="icon-facebook"></span></a>
-            <!-- <a href="#" class="p-3"><span class="icon-twitter"></span></a>
-            <a href="#" class="p-3"><span class="icon-instagram"></span></a> -->
-            <a href="https://www.linkedin.com/in/mananbh9/" class="p-3"><span class="icon-linkedin"></span></a>
-            <!-- <a href="#" class="p-3"><span class="icon-pinterest"></span></a> -->
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <p class="mb-0">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div> <!-- .site-wrap -->
-
+    <div class="footer py-5 text-center">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12">
+            <p class="mb-0">
+              <!-- <a href="https://www.facebook.com/bh1719" class="p-3"><span class="icon-facebook"></span></a> -->
+              <!-- <a href="#" class="p-3"><span class="icon-twitter"></span></a> -->
+              <!-- <a href="#" class="p-3"><span class="icon-instagram"></span></a> -->
+              <a target="_blank" href="https://www.linkedin.com/in/mananbh9/" class="p-3"><span class="icon-linkedin"></span></a>
+              <a target="_blank" href="https://www.github.com/mananbh9" class="p-3"><img src="{{ url_for('static', filename='images/github.png') }}" width="16" height="16"></a>
+              <!-- <a href="#" class="p-3"><span class="icon-pinterest"></span></a> -->
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="mb-0">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .site-wrap -->
   <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
   <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
@@ -626,5 +636,5 @@
   <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>  
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+</body>
 </html>
