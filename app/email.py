@@ -1,10 +1,13 @@
 import smtplib, ssl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
+
+
 def send_email_notification(email_address, subject, body):
 
-	FROM_EMAIL_ADDRESS = os.environ("FROM_EMAIL_ADDRESS")
-	FROM_EMAIL_PASSSWORD = os.environ("FROM_EMAIL_PASSSWORD")
+	FROM_EMAIL_ADDRESS = os.environ["FROM_EMAIL_ADDRESS"]
+	FROM_EMAIL_PASSSWORD = os.environ["FROM_EMAIL_PASSSWORD"]
 	RECEIVER_EMAIL_ADDRESS = email_address
 
 	subject_user = "Confirmation from cvmananbh9.herokuapp.com for Submitting feedback"
@@ -24,3 +27,4 @@ def send_email_notification(email_address, subject, body):
 	smtp.sendmail(FROM_EMAIL_ADDRESS, FROM_EMAIL_ADDRESS, message_admin)
 
 	smtp.quit()
+

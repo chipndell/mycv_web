@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, flash, redirect, get_flashed_messages
 from .forms import ContactForm
 from .email import send_email_notification
+import os
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ("MYCV_WEB_APP_SECRET")
+app.config['SECRET_KEY'] = os.environ["MYCV_WEB_APP_SECRET"]
+
 
 @app.route('/', methods=["GET","POST"])
 def index():
