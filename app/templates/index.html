@@ -114,11 +114,11 @@
             </div>           
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
+            <div class="unit-4 d-block" style="padding-bottom: 20px">
+              <div class="unit-4-icon mb-6">
                 <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/python.png')}}" width="32" height="32"/></span></span>
               </div>
-              <div>
+              <div style="height: 255px">
                 <h3>Python</h3>
                 <p class="font-weight-normal">Strong conceptual understanding of the Python tested over projects with Web Development with Django/Flask frameworks. Also used same for Data Science, Machine learning algorithms to categorize the input value. </p>
                 <p><a target="_blank" href="https://drive.google.com/open?id=1y-zq2hoeSRAfAZFenzTDgpNr7SDdnh-S">Certificate</a></p>
@@ -130,7 +130,7 @@
               <div class="unit-4-icon mb-3">
                 <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/linux.svg')}}" width="32" height="32"/></span></span>
               </div>
-              <div>
+              <div style="height: 250px">
                 <h3>Linux OS</h3>
                 <p class="font-weight-normal">More than 1 year of hands on experience working with Linux, with good command over command line interface. Sound understanding of network, system, files distribution, processes, ssh and more... </p>             
                 <p><a target="_blank" href="https://drive.google.com/open?id=1T51l8fWWBIKB1ik08hY0V1g1GdrPpn7J">Certificate</a></p>
@@ -142,19 +142,19 @@
               <div class="unit-4-icon mb-3">
                 <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/analytics.png')}}" width="32" height="32"/></span></span>
               </div>
-              <div>
+              <div style="height: 315px">
                 <h3>Analytical Skill</h3>
                 <p class="font-weight-normal">Excellent analytical skill proven over Major Research Project (MRP). Successfully lead the team and met all the timelines. Effectively liason with client and team members. Got endorsement for Leadership, Customer Service & Data Analysis by client.</p>
                 <!-- <p><a href="#">Learn More</a></p> -->
               </div>
             </div>
-          </div>
+          </div style="height: 315px">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4 d-block">
+            <div class="unit-4 d-block" style="padding-bottom: 0px">
               <div class="unit-4-icon mb-3">
                 <span class="icon-wrap"><span class="text-primary "><img src="{{ url_for('static', filename='images/devops.jpg')}}" width="32" height="32"/></span></span>
               </div>
-              <div >
+              <div style="height: 345px">
                 <h3>DevOps Tools</h3>
                 <div class="overflow-auto">
                   <p class="font-weight-normal">Learnt functions and architecture of tools like Docker, Ansible and Jenkins. Also gained hands on experience to write script in linux shell, docker, jenkins and ansible to automate processes in docker/cloud instances. With my strong conceptual understanding these tech stack you can expect consistent outcome, everytime!</p>
@@ -168,7 +168,7 @@
               <div class="unit-4-icon mb-3">
                 <span class="icon-wrap"><span class="text-primary"><img src="{{ url_for('static', filename='images/internet.png')}}" width="32" height="32"/></span></span>
               </div>
-              <div>
+              <div style="height: 315px">
                 <h3>Web Development</h3>
                 <p class="font-weight-normal">Gained Clear understanding of Web developement, JavaScript/ECMAScript in detail. Also gained hands on experience working with npm, react, redux, node.js like in trend framework/library. Also gained experience working with Bootstrap, HTML and CSS </p>
                 <p><a target="_blank" href="https://drive.google.com/file/d/1kln7cnvHpawxfqIFd6fvKJDtYMGCu4tl/view?usp=sharing">Certificate</a></p>
@@ -544,51 +544,61 @@
 
             <form action="" method="post" class="p-5 bg-white">
               {{ form.hidden_tag() }}
-              <h2 class="h4 text-black mb-5">Contact Form</h2> 
-              <p class="text-secondary mb-5">Contact me regarding employmeny opportunity or technical question/challenge you are interested in.</p>
+              <h2 class="h4 text-center text-black mb-5">Contact Form</h2> 
+              <p class="text-center text-secondary mb-5">Contact me regarding employmeny opportunity or technical question/challenge you are interested in.</p>
               <div class="row form-group">
-                <div class="col-md-12 ">
+                <div class="d-flex justify-content-center col-md-12 ">
                   <!-- <label class="text-black" for="fname">First Name</label> -->
                   <!-- <input type="text" name="f_name" id="fname" class="form-control rounded-0"> -->
                   {{ form.f_name.label }}
+                  <span style="margin-left:10px">
                   {{ form.f_name }}
+                  </span>
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col-md-12">
+                <div class="d-flex justify-content-center col-md-12">
                   <!-- <label class="text-black" for="lname">Last Name</label> -->
                   <!-- <input type="text" name="l_name" id="lname" class="form-control rounded-0"> -->
                   {{ form.l_name.label }}
+                  <span style="margin-left:10px">
                   {{ form.l_name }}
+                  </span>
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col-md-12">
+                <div class="d-flex justify-content-center col-md-12">
                   <!-- <label class="text-black" for="email">Email</label>  -->
                   <!-- <input type="email" name="email" id="email" class="form-control rounded-0"> -->
                   {{ form.email.label }}
-                  {{ form.email }}
+                  <span style="margin-left: 47px">
+                    {{ form.email }}
+                  </span>
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col-md-12">
+                <div class="d-flex justify-content-center col-md-12">
                   <!-- <label class="text-black" for="subject">Subject</label>  -->
                 <!-- <input type="subject" name="subject" id="subject" class="form-control 
                   rounded-0"> -->
                   {{ form.subject.label }}
-                  {{ form.subject }}
+                  <span style="margin-left: 30px">
+                    {{ form.subject }}
+                  </span>
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col-md-12">
+                <div class="d-flex justify-content-center col-md-12">
                   <!-- <label class="text-black" for="message">Message</label>  -->
                   <!-- <textarea name="message" name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Leave your message here..."></textarea> -->
                   {{ form.message.label }}
+                  <span style="margin-left: 20px">
                   {{ form.message }}
+                  </span>
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col-md-12">
+                <div class="d-flex justify-content-center col-md-12">
                   <!-- <input type="submit" value="Send Message" class="btn btn-primary mr-2 mb-2"> -->
                   {{ form.submit }}
                 </div>
